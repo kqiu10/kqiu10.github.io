@@ -32,7 +32,8 @@ export const siteConfig: SiteConfig = {
 
 // Used to generate the Header nav. External URLs open in a new tab.
 // Order here is the display order; Home is hidden while on the home page.
-export const menuLinks: { path: string; title: string }[] = [
+// highlight: renders the link larger and in the accent blue.
+export const menuLinks: { path: string; title: string; highlight?: boolean }[] = [
 	{
 		path: "/",
 		title: "Home",
@@ -48,6 +49,7 @@ export const menuLinks: { path: string; title: string }[] = [
 	{
 		path: "/posts/",
 		title: "Blog",
+		highlight: true,
 	},
 ];
 
