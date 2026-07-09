@@ -33,12 +33,14 @@ const pinnedPosts = allPostsByDate
 				<a class="cactus-link" href="https://leapbound.ai/" rel="noreferrer" target="_blank"
 					>Leapbound.ai</a
 				>.{" "}
-				A developer for 5+ years, he was previously a senior software engineer at Meta and, before
-				that, an engineer on Amazon’s DynamoDB team. An avid learner of all things AI — LLM
-				inference optimization and agent harnesses in particular — he is exploring a new engineering
-				paradigm: automate whatever AI can already do, and pour human effort into making LLMs capable
-				of more. He shares what he learns along the way, from work and study alike, and you can find
-				his writing on the <a class="cactus-link" href="/blog/">blog</a>.
+				He was previously a senior software engineer at Meta and, before that, an engineer on Amazon’s
+				DynamoDB team — a developer for 5+ years in all. An avid learner of all things AI — LLM inference optimization
+				and agent harnesses in particular — he is exploring a new engineering paradigm: automate whatever
+				AI can already do, and pour human effort into making LLMs capable of more. He shares what he learns
+				along the way, from work and study alike, and you can find his writing on the <a
+					class="cactus-link"
+					href="/blog/">blog</a
+				>.
 			</p>
 		</div>
 		{/* right grid column is reserved for a future image-container */}
@@ -46,7 +48,7 @@ const pinnedPosts = allPostsByDate
 	{
 		pinnedPosts.length > 0 && (
 			<section class="mt-16">
-				<h2 class="title mb-6 text-xl">Pinned Posts</h2>
+				<h2 class="section-title">Featured AI Articles</h2>
 				<ul class="space-y-4" role="list">
 					{pinnedPosts.map((p) => (
 						<li class="grid gap-1 sm:grid-cols-[auto_1fr]">
