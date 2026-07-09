@@ -14,7 +14,8 @@ export const siteConfig: SiteConfig = {
 	// Used as both a meta property (src/components/BaseHead.astro L:31 + L:49) & the generated satori png (src/pages/og-image/[slug].png.ts)
 	author: "Kan Qiu",
 	// Used as the default description meta property and webmanifest description
-	description: "Kan Qiu's personal blog — documenting hands-on practice in LLM applications and agent development, along with reflections on engineering and life.",
+	description:
+		"Kan Qiu's personal blog — documenting hands-on practice in LLM applications and agent development, along with reflections on engineering and life.",
 	// HTML lang property, found in src/layouts/Base.astro L:18 & astro.config.ts L:48
 	lang: "en-GB",
 	// Meta property, found in src/components/BaseHead.astro L:42
@@ -36,16 +37,8 @@ export const menuLinks: { path: string; title: string }[] = [
 		title: "Home",
 	},
 	{
-		path: "/about/",
-		title: "About",
-	},
-	{
 		path: "/posts/",
 		title: "Blog",
-	},
-	{
-		path: "/notes/",
-		title: "Notes",
 	},
 ];
 
@@ -63,18 +56,7 @@ export const expressiveCodeOptions: AstroExpressiveCodeOptions = {
 		},
 		uiLineHeight: "inherit",
 	},
-	themeCssSelector(theme, { styleVariants }) {
-		// If one dark and one light theme are available
-		// generate theme CSS selectors compatible with cactus-theme dark mode switch
-		if (styleVariants.length >= 2) {
-			const baseTheme = styleVariants[0]?.theme;
-			const altTheme = styleVariants.find((v) => v.theme.type !== baseTheme?.type)?.theme;
-			if (theme === baseTheme || theme === altTheme) return `[data-theme='${theme.type}']`;
-		}
-		// return default selector
-		return `[data-theme="${theme.name}"]`;
-	},
-	// One dark, one light theme => https://expressive-code.com/guides/themes/#available-themes
-	themes: ["dracula", "github-light"],
+	// https://expressive-code.com/guides/themes/#available-themes
+	themes: ["github-light"],
 	useThemedScrollbars: false,
 };
