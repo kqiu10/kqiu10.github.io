@@ -96,8 +96,22 @@
 		}
 	}
 
+	/* Links, after addyosmani.com: blue with hover-only underline on light
+	   backgrounds (his `p a`), butter yellow and never underlined inside the
+	   dark hero (his `.image-text a`) */
 	.cactus-link {
-		@apply hover:decoration-link underline underline-offset-2 hover:decoration-2;
+		color: #4576c0;
+		transition: all 0.15s ease;
+	}
+	.cactus-link:hover {
+		text-decoration-line: underline;
+		text-underline-offset: 2px;
+	}
+	.text-container .cactus-link {
+		color: #feed73;
+	}
+	.text-container .cactus-link:hover {
+		text-decoration-line: none;
 	}
 
 	.title {
@@ -112,7 +126,7 @@
 	--tw-prose-code: var(--color-global-text);
 	--tw-prose-headings: var(--color-accent-2);
 	--tw-prose-hr: 0.5px dashed #666;
-	--tw-prose-links: var(--color-global-text);
+	--tw-prose-links: #4576c0;
 	--tw-prose-quotes: var(--color-quote);
 	--tw-prose-th-borders: #666;
 }

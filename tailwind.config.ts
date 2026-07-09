@@ -8,11 +8,11 @@ export default {
 				DEFAULT: {
 					css: {
 						a: {
+							textDecoration: "none",
 							textUnderlineOffset: "2px",
 							"&:hover": {
 								"@media (hover: hover)": {
-									textDecorationColor: "var(--color-link)",
-									textDecorationThickness: "2px",
+									textDecoration: "underline",
 								},
 							},
 						},
