@@ -30,11 +30,21 @@ export const siteConfig: SiteConfig = {
 	},
 };
 
-// Used to generate links in both the Header & Footer.
+// Used to generate the Header nav. External URLs open in a new tab.
+// Order here is the display order; Home is hidden while on the home page.
 export const menuLinks: { path: string; title: string }[] = [
 	{
 		path: "/",
 		title: "Home",
+	},
+	{
+		path: "https://github.com/kqiu10",
+		title: "GitHub",
+	},
+	{
+		// TODO: replace with your real LinkedIn profile URL
+		path: "https://www.linkedin.com/in/REPLACE-ME/",
+		title: "LinkedIn",
 	},
 	{
 		path: "/posts/",
