@@ -22,15 +22,13 @@ const pinnedPosts = allPostsByDate
 ---
 
 <PageLayout meta={{ title: "Home" }}>
-	<section class="mx-[calc(50%-50vw)] -mt-12 bg-zinc-900 py-16 text-zinc-100 sm:py-20">
-		<div class="mx-auto max-w-3xl px-4 sm:px-8">
-			<h1 class="mb-6 text-2xl font-semibold text-white sm:text-3xl">Hi, I’m Kan Qiu 👋</h1>
-			<p class="mb-6 max-w-xl leading-relaxed">
-				I’m a software engineer writing about LLM applications, agents, and the infrastructure
-				behind them. Previously I worked on ads at Meta and core infrastructure at AWS.
-			</p>
-			<SocialList />
-		</div>
+	<section class="pt-14 pb-6 sm:pt-20" slot="hero">
+		<h1 class="mb-6 text-2xl font-semibold text-white sm:text-3xl">Hi, I’m Kan Qiu 👋</h1>
+		<p class="mb-6 max-w-xl leading-relaxed">
+			I’m a software engineer writing about LLM applications, agents, and the infrastructure
+			behind them. Previously I worked on ads at Meta and core infrastructure at AWS.
+		</p>
+		<SocialList />
 	</section>
 	{
 		pinnedPosts.length > 0 && (

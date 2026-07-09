@@ -20,14 +20,21 @@ const {
 		<BaseHead articleDate={articleDate} description={description} ogImage={ogImage} title={title} />
 	</head>
 	<body
-		class="bg-global-bg text-global-text mx-auto flex min-h-screen max-w-3xl flex-col px-4 pt-16 font-mono text-sm font-normal antialiased sm:px-8"
+		class="bg-global-bg text-global-text flex min-h-screen flex-col font-sans text-sm font-normal antialiased"
 	>
 		<SkipLink />
-		<Header />
-		<main id="main">
-			<slot />
-		</main>
-		<Footer />
+		<div class="bg-zinc-900 text-zinc-100">
+			<div class="mx-auto w-full max-w-3xl px-4 pt-16 pb-8 sm:px-8">
+				<Header />
+				<slot name="hero" />
+			</div>
+		</div>
+		<div class="mx-auto flex w-full max-w-3xl grow flex-col px-4 sm:px-8">
+			<main id="main" class="mt-16">
+				<slot />
+			</main>
+			<Footer />
+		</div>
 		<script is:inline type="speculationrules">
 			{
 				"prefetch": [

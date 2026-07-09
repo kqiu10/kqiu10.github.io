@@ -10,6 +10,7 @@
 @config "../../tailwind.config.ts";
 
 @theme {
+	--font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	--color-global-bg: oklch(98.48% 0 0);
 	--color-global-text: oklch(26.99% 0.0096 235.05);
 	--color-muted: oklch(44.6% 0.03 256.802);
@@ -24,9 +25,6 @@
 		color-scheme: light;
 		accent-color: var(--color-accent);
 		scrollbar-gutter: stable;
-		/* the homepage hero breaks out of the centered column with 100vw margins;
-		   clip stray horizontal overflow from the scrollbar width */
-		overflow-x: clip;
 	}
 
 	:target {
