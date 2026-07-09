@@ -23,14 +23,15 @@ const {
 		class="bg-global-bg text-global-text flex min-h-screen flex-col font-sans text-sm font-normal antialiased"
 	>
 		<SkipLink />
-		<div class="bg-zinc-900 text-zinc-100">
-			<div class="w-full px-5 pt-16 pb-8">
+		{/* addyosmani.com framing: the dark box is inset 20px from the viewport */}
+		<div class="p-5">
+			<div class="bg-zinc-900 px-5 pt-6 pb-8 text-zinc-100 sm:px-8">
 				<Header />
 				<slot name="hero" />
 			</div>
 		</div>
-		<div class="flex w-full grow flex-col px-5">
-			<main id="main" class="mt-16">
+		<div class="mx-auto flex w-full max-w-3xl grow flex-col px-4 sm:px-8">
+			<main id="main" class="mt-12">
 				<slot />
 			</main>
 			<Footer />
