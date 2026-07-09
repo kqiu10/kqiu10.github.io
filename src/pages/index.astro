@@ -22,14 +22,15 @@ const pinnedPosts = allPostsByDate
 ---
 
 <PageLayout meta={{ title: "Home" }}>
-	<section>
-		<h1 class="title mb-12">Hello World!</h1>
-		<p class="mb-4">
-			Hi, I’m a theme for Astro, a simple starter that you can use to create your website or blog.
-			If you want to know more about how you can customise me, add more posts, and make it your own,
-			click on the GitHub icon link below and it will take you to my repo.
-		</p>
-		<SocialList />
+	<section class="mx-[calc(50%-50vw)] -mt-12 bg-zinc-900 py-16 text-zinc-100 sm:py-20">
+		<div class="mx-auto max-w-3xl px-4 sm:px-8">
+			<h1 class="mb-6 text-2xl font-semibold text-white sm:text-3xl">Hi, I’m Kan Qiu 👋</h1>
+			<p class="mb-6 max-w-xl leading-relaxed">
+				I’m a software engineer writing about LLM applications, agents, and the infrastructure
+				behind them. Previously I worked on ads at Meta and core infrastructure at AWS.
+			</p>
+			<SocialList />
+		</div>
 	</section>
 	{
 		pinnedPosts.length > 0 && (

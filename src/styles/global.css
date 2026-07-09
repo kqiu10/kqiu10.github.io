@@ -24,6 +24,9 @@
 		color-scheme: light;
 		accent-color: var(--color-accent);
 		scrollbar-gutter: stable;
+		/* the homepage hero breaks out of the centered column with 100vw margins;
+		   clip stray horizontal overflow from the scrollbar width */
+		overflow-x: clip;
 	}
 
 	:target {
