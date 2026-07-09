@@ -43,7 +43,7 @@ export const menuLinks: { path: string; title: string }[] = [
 	},
 	{
 		// TODO: replace with your real LinkedIn profile URL
-		path: "https://www.linkedin.com/in/REPLACE-ME/",
+		path: "https://www.linkedin.com/in/greg-kan-qiu-07ab03194/",
 		title: "LinkedIn",
 	},
 	{
