@@ -4,7 +4,7 @@ import { z } from "astro/zod";
 
 // Central tag vocabulary: a post using a tag not listed here fails the build.
 // Tags are matched case-insensitively and stored lowercase.
-export const APPROVED_TAGS = ["agents", "career", "harness", "inference", "infra"] as const;
+export const APPROVED_TAGS = ["agent", "career", "harness", "inference", "infra"] as const;
 
 const titleSchema = z.string().max(60);
 

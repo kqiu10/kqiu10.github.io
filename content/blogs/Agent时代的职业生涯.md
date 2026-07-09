@@ -2,9 +2,8 @@
 title: "Agent时代的职业生涯"
 description: "在 AI Agent 重塑软件工程的时代，工程师的职业生涯该如何规划？"
 publishDate: "09 Jul 2026"
-tags: ["agents", "career"]
+tags: ["agent", "career"]
 pinned: true
-draft: true # 写完后删掉这一行即发布
 ---
 
 _一句话开场：立一个观点，或抛一个问题。_
