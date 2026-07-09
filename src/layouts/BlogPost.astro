@@ -26,7 +26,8 @@ const readingTime: string = remarkPluginFrontmatter.readingTime;
 		title,
 	}}
 >
-	<article class="grow break-words" data-pagefind-body>
+	{/* articles keep addyosmani's ~760px reading measure while listing pages use the wide column */}
+	<article class="mx-auto w-full max-w-3xl grow break-words" data-pagefind-body>
 		<div id="blog-hero" class="mb-10"><Masthead content={post} readingTime={readingTime} /></div>
 		<div class="prose prose-headings:text-accent-2 prose-headings:font-semibold max-w-none">
 			<slot />
