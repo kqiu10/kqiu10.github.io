@@ -14,8 +14,8 @@ const links = menuLinks.filter((link) => !(link.path === "/" && onHome));
 					aria-current={Astro.url.pathname === link.path ? "page" : false}
 					class:list={[
 						"font-medium transition-colors duration-150 hover:text-[#6991ff]",
-						// highlighted links pair addyosmani's base blue with the #6991ff
-						// hover; the darker shade keeps contrast on light pages
+						// highlighted links render larger in the accent blue; the darker
+						// shade keeps contrast on light pages
 						link.highlight
 							? ["text-base", onHome ? "text-[#5badf0]" : "text-[#2f7cd6]"]
 							: "text-inherit",
