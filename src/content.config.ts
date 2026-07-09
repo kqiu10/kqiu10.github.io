@@ -2,9 +2,26 @@ import { defineCollection } from "astro:content";
 import { glob } from "astro/loaders";
 import { z } from "astro/zod";
 
-function removeDupsAndLowerCase(array: string[]) {
-	return [...new Set(array.map((str) => str.toLowerCase()))];
-}
+// Central tag vocabulary: a post using a tag not listed here fails the build.
+// Tags are matched case-insensitively and stored lowercase.
+export const APPROVED_TAGS = [
+	// site vocabulary
+	"agents",
+	"career",
+	"harness",
+	"inference",
+	"infra",
+	// demo-content tags — delete alongside the demo posts
+	"admonitions",
+	"astro",
+	"blog",
+	"example",
+	"image",
+	"markdown",
+	"social",
+	"test",
+	"webmentions",
+] as const;
 
 const titleSchema = z.string().max(60);
 
@@ -26,7 +43,10 @@ const post = defineCollection({
 				.optional(),
 			draft: z.boolean().default(false),
 			ogImage: z.string().optional(),
-			tags: z.array(z.string()).default([]).transform(removeDupsAndLowerCase),
+			tags: z
+				.array(z.preprocess((val) => String(val).toLowerCase(), z.enum(APPROVED_TAGS)))
+				.default([])
+				.transform((arr) => [...new Set(arr)]),
 			publishDate: z
 				.string()
 				.or(z.date())
