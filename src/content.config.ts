@@ -14,7 +14,7 @@ const baseSchema = z.object({
 
 const post = defineCollection({
 	// template/ holds the copy-me post skeleton and is excluded from the collection
-	loader: glob({ base: "./content/blogs", pattern: ["**/*.{md,mdx}", "!template/**"] }),
+	loader: glob({ base: "./content/blogs", pattern: ["**/*.{md,mdx}", "!**/template/**"] }),
 	schema: ({ image }) =>
 		baseSchema.extend({
 			description: z.string(),
