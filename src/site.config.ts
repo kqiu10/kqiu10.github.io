@@ -51,7 +51,7 @@ export const menuLinks: { path: string; title: string; highlight?: boolean }[] =
 		title: "Contact",
 	},
 	{
-		path: "/posts/",
+		path: "/blog/",
 		title: "Blog",
 		highlight: true,
 	},
