@@ -1,6 +1,7 @@
 ---
-# Template: copy this file to start a new post.
-# draft: true keeps it off the live site (visible in dev with a "(Draft)" badge).
+# Template: copy this file OUT into content/blogs/ to start a new post.
+# (the template/ folder itself is excluded from the site — see src/content.config.ts)
+# draft: true keeps a post off the live site (visible in dev with a "(Draft)" badge).
 title: "Your post title, 60 characters max"
 description: "One or two sentences used for SEO and link previews."
 publishDate: "09 Jul 2026"
