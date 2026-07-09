@@ -67,7 +67,9 @@
 	/* Centered section heading, after addyosmani.com:
 	   italic Georgia at 2rem in muted gray */
 	.section-title {
-		font: italic 2rem/1.3 Georgia, serif;
+		font:
+			italic 2rem / 1.3 Georgia,
+			serif;
 		color: #bbb;
 		text-align: center;
 		margin-top: 1rem;
