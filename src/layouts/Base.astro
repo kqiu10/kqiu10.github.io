@@ -13,6 +13,8 @@ interface Props {
 const {
 	meta: { articleDate, description = siteConfig.description, ogImage, title },
 } = Astro.props;
+
+const onHome = Astro.url.pathname === "/";
 ---
 
 <html class="scroll-smooth" lang={siteConfig.lang}>
@@ -23,13 +25,23 @@ const {
 		class="bg-global-bg text-global-text flex min-h-screen flex-col font-sans text-sm font-normal antialiased"
 	>
 		<SkipLink />
-		{/* framing: the dark box is inset 20px from the viewport */}
-		<div class="p-5">
-			<div class="bg-zinc-900 px-5 pt-6 pb-8 text-zinc-100 sm:px-8">
-				<Header />
-				<slot name="hero" />
-			</div>
-		</div>
+		{/* home page: nav + hero inside the dark box, inset 20px from the viewport;
+		    other pages: nav sits directly on the page background */}
+		{
+			onHome ? (
+				<div class="p-5">
+					<div class="bg-zinc-900 px-5 pt-6 pb-8 text-zinc-100 sm:px-8">
+						<Header />
+						<slot name="hero" />
+					</div>
+				</div>
+			) : (
+				<div class="px-5 pt-6">
+					<Header />
+					<slot name="hero" />
+				</div>
+			)
+		}
 		<div class="mx-auto flex w-full max-w-3xl grow flex-col px-4 sm:px-8">
 			<main id="main" class="mt-12">
 				<slot />

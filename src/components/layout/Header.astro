@@ -11,7 +11,7 @@ const links = menuLinks.filter((link) => !(link.path === "/" && Astro.url.pathna
 			links.map((link) => (
 				<a
 					aria-current={Astro.url.pathname === link.path ? "page" : false}
-					class="font-medium text-zinc-100 underline-offset-2 hover:underline"
+					class="font-medium text-inherit underline-offset-2 hover:underline"
 					href={link.path}
 					rel={link.path.startsWith("http") ? "noreferrer" : undefined}
 					target={link.path.startsWith("http") ? "_blank" : undefined}
