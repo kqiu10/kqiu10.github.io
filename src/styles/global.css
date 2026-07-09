@@ -64,6 +64,13 @@
 	.text-container {
 		padding-left: 80px;
 	}
+	/* Article date line, after addyosmani.com's h2.headline */
+	.headline {
+		font:
+			italic 19px / 1.3 Georgia,
+			serif;
+		color: #bbb;
+	}
 	/* Centered section heading, after addyosmani.com:
 	   italic Georgia at 2rem in muted gray */
 	.section-title {
