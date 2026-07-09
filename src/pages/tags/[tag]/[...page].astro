@@ -31,8 +31,8 @@ const tagMeta = await getTagMeta(tag);
 const TagContent = tagMeta ? (await render(tagMeta)).Content : null;
 
 const meta = {
-	description: tagMeta?.data.description ?? `View all posts with the tag - ${tag}`,
-	title: tagMeta?.data.title ?? `Posts about ${tag}`,
+	description: tagMeta?.data.description ?? `View all blogs with the tag - ${tag}`,
+	title: tagMeta?.data.title ?? `Blogs about ${tag}`,
 };
 
 const paginationProps = {
@@ -61,7 +61,7 @@ const paginationProps = {
 			<li aria-current="page" class=""><span aria-hidden="true">#</span>{tag}</li>
 		</ul>
 	</nav>
-	<h1 class="title capitalize">{tagMeta?.data.title ?? `Posts about ${tag}`}</h1>
+	<h1 class="title capitalize">{tagMeta?.data.title ?? `Blogs about ${tag}`}</h1>
 	<div class="prose prose-sm prose-cactus mb-16 max-w-none">
 		{tagMeta?.data.description && <p>{tagMeta.data.description}</p>}
 		{TagContent && <TagContent />}

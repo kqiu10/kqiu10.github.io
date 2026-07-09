@@ -8,8 +8,8 @@ import { collectionDateSort } from "@/utils/date";
 const allPosts = await getAllPosts();
 const allPostsByDate = allPosts.sort(collectionDateSort) as CollectionEntry<"post">[];
 
-// Pinned Posts, set to a max of 3;
-const MAX_PINNED_POSTS = 3;
+// Pinned Posts, set to a max of 5;
+const MAX_PINNED_POSTS = 5;
 const pinnedPosts = allPostsByDate
 	.values()
 	.filter((p) => p.data.pinned)
@@ -71,8 +71,11 @@ const latestPost = allPostsByDate[0];
 				<div>
 					<h2 class="title mb-4 text-xl">Blog</h2>
 					<p class="leading-relaxed">
-						You can find my writing on my <a class="cactus-link" href="/blog/">blog</a>. My last
-						post on here was:{" "}
+						You can find my writing on my{" "}
+						<a class="cactus-link" href="/blog/">
+							blog
+						</a>
+						. My last post on here was:{" "}
 						<a class="cactus-link" href={`/blog/${latestPost.id}/`}>
 							{latestPost.data.title}
 						</a>
