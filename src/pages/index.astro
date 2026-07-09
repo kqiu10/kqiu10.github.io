@@ -15,6 +15,8 @@ const pinnedPosts = allPostsByDate
 	.filter((p) => p.data.pinned)
 	.take(MAX_PINNED_POSTS)
 	.toArray();
+
+const latestPost = allPostsByDate[0];
 ---
 
 <PageLayout meta={{ title: "Home" }}>
@@ -53,6 +55,29 @@ const pinnedPosts = allPostsByDate
 						</li>
 					))}
 				</ul>
+			</section>
+		)
+	}
+	{
+		latestPost && (
+			<section class="mt-16 flex items-start gap-6">
+				<img
+					alt=""
+					class="h-18 w-18 shrink-0 rounded-full"
+					height="72"
+					src="/github-notebook.svg"
+					width="72"
+				/>
+				<div>
+					<h2 class="title mb-4 text-xl">Blog</h2>
+					<p class="leading-relaxed">
+						You can find my writing on my <a class="cactus-link" href="/blog/">blog</a>. My last
+						post on here was:{" "}
+						<a class="cactus-link" href={`/blog/${latestPost.id}/`}>
+							{latestPost.data.title}
+						</a>
+					</p>
+				</div>
 			</section>
 		)
 	}
