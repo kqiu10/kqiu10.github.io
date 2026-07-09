@@ -22,11 +22,8 @@ const pinnedPosts = allPostsByDate
 ---
 
 <PageLayout meta={{ title: "Home" }}>
-	<section class="pt-14 pb-6 sm:pt-20" slot="hero">
-		{
-			/* text fills the left 70%; the right 30% is free for a future photo (switch to a 70/30 grid when adding one) */
-		}
-		<div class="sm:max-w-[70%]">
+	<section class="hero-container" slot="hero">
+		<div class="text-container">
 			<h1 class="mb-6 text-2xl font-semibold text-white sm:text-3xl">About</h1>
 			<p class="mb-6 leading-relaxed">
 				I’m a software engineer writing about LLM applications, agents, and the infrastructure
@@ -34,6 +31,7 @@ const pinnedPosts = allPostsByDate
 			</p>
 			<SocialList />
 		</div>
+		{/* right grid column is reserved for a future image-container, addyosmani-style */}
 	</section>
 	{
 		pinnedPosts.length > 0 && (
