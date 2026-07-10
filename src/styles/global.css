@@ -123,7 +123,7 @@
 	--tw-prose-bullets: var(--color-global-text);
 	--tw-prose-code: var(--color-global-text);
 	--tw-prose-headings: var(--color-accent-2);
-	--tw-prose-hr: 0.5px dashed #666;
+	--tw-prose-hr: #eee;
 	--tw-prose-links: #4576c0;
 	--tw-prose-quotes: var(--color-quote);
 	--tw-prose-th-borders: #666;

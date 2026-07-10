@@ -17,6 +17,8 @@ draft: true
 
 _An italic opening line that frames the piece — a hook, a claim, or a question._
 
+---
+
 ## First section
 
 Short paragraphs read best. Links look like [this](https://example.com), and inline code

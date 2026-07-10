@@ -24,7 +24,7 @@ export default {
 							borderRadius: "2px",
 						},
 						hr: {
-							borderTopStyle: "dashed",
+							borderTopStyle: "solid",
 						},
 						strong: {
 							fontWeight: "700",
