@@ -128,3 +128,9 @@
 	--tw-prose-quotes: var(--color-quote);
 	--tw-prose-th-borders: #666;
 }
+
+/* footnote block: show the notes only — no generated "Footnotes" heading, no backref arrows */
+#footnote-label,
+.data-footnote-backref {
+	display: none;
+}
