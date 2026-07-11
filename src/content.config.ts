@@ -4,6 +4,7 @@ import { z } from "astro/zod";
 
 // Central tag vocabulary: a post using a tag not listed here fails the build.
 // Tags are matched case-insensitively and stored lowercase.
+// Tags are metadata only — the UI no longer renders them, but every post must carry at least one.
 export const APPROVED_TAGS = ["agent", "career", "harness", "inference", "infra"] as const;
 
 const titleSchema = z.string().max(60);
@@ -28,7 +29,7 @@ const post = defineCollection({
 			ogImage: z.string().optional(),
 			tags: z
 				.array(z.preprocess((val) => String(val).toLowerCase(), z.enum(APPROVED_TAGS)))
-				.default([])
+				.min(1, "every post needs at least one tag")
 				.transform((arr) => [...new Set(arr)]),
 			publishDate: z
 				.string()

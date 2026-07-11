@@ -5,7 +5,7 @@
 title: "Your post title, 60 characters max"
 description: "One or two sentences used for SEO and link previews."
 publishDate: "09 Jul 2026"
-tags: ["agents", "inference"] # must come from APPROVED_TAGS in src/content.config.ts
+tags: ["agent", "inference"] # must come from APPROVED_TAGS in src/content.config.ts
 draft: true
 # pinned: true                 # uncomment to feature it on the homepage
 # updatedDate: "10 Jul 2026"   # shows an "updated" note next to the date
